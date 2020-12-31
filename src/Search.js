@@ -3,18 +3,22 @@ import './Search.css'
 import SearchIcon from '@material-ui/icons/Search'
 import MicIcon from '@material-ui/icons/Mic'
 import { Button }  from '@material-ui/core'
+import { useHistory } from "react-router-dom"
 
 export default function Search() {
 
     const [input, setInput] = useState("");
+    const history = useHistory();
 
 
     const search = e => {
         e.preventDefault();
+        console.log('you hit search', input)
+        history.push('/search')
     } 
 
     return (
-        <div className='search'>
+        <form className='search'>
             <div className="search__input">
                 <SearchIcon className='search__inputIcon'/>
                 <input value={input} onChange={e => setInput(e.target.value)}/>
@@ -22,10 +26,10 @@ export default function Search() {
             </div>
 
             <div className="search__buttons">
-                <Button onClick={search} variant="outlined"> Google Search</Button>
+                <Button type="submit" onClick={search} variant="outlined"> Google Search</Button>
                 <Button variant="outlined">feeling lucky?</Button>
             </div>
 
-        </div>
+        </form>
     )
 }
