@@ -3,6 +3,7 @@ import './Home.css'
 import { Link } from "react-router-dom"
 import AppsIcon from '@material-ui/icons/Apps'
 import { Avatar } from '@material-ui/core'
+import Search from './Search'
 
 function Home() {
     return (
@@ -22,7 +23,10 @@ function Home() {
             </div>
 
             <div className="home__body"> 
-                <img src="/images/rainbow1.png" alt="google"/>
+                    <img src="/images/rainbow1.png" alt="google"/>
+                <div className="home__inputContainer"> 
+                    <Search/>
+                </div>
             </div>
 
         </div>
