@@ -67,15 +67,19 @@ export default function SearchPage() {
               <Link to='/tools'>Tools</Link>
             </div>
           </div>
-          
+     
         </div>
       </div>
     </div>
 
-
+    {true && (
       <div className="searchPage__results">
-
+        <p className='searchPage__resultCount'>
+          About {data?.searchInformation.formattedTotalResults} ({data?.searchInformation.formattedSearchTime} seconds) for Tesla
+        </p>
       </div>
+    )}
+
     </div>
   );
 }
