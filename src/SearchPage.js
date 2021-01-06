@@ -26,7 +26,7 @@ export default function SearchPage() {
     <div className="searchPage">
       <div className="searchPage__header">
        <Link to='/'>
-         <img className='searchPage__logo' src="/images/rainbow2.png" alt=""/>
+         <img className='searchPage__logo' src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt=""/>
        </Link>
       <div className='searchPage__headerBody'>
         <Search hideButtons/>
