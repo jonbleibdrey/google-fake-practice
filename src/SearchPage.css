@@ -76,3 +76,18 @@
 .searchPage__resultTitle:hover{
     text-decoration: underline;
 }
+
+.searchPage__resultTitle > h2 {
+    font-weight: 500;
+}
+
+.searchPage__resultSnippet{
+    margin-top: 10px;
+}
+
+.searchPage__resultImage {
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
