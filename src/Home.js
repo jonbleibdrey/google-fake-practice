@@ -23,7 +23,7 @@ function Home() {
             </div>
 
             <div className="home__body"> 
-                    <img src="/images/rainbow1.png" alt="google"/>
+                    <img src="/images/rainbow2.png" alt="google"/>
                 <div className="home__inputContainer"> 
                     <Search/>
                 </div>
