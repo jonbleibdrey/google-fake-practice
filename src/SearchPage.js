@@ -13,7 +13,7 @@ import RoomIcon from '@material-ui/icons/Room'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 
 export default function SearchPage() {
-  const [{ term }, dispatch] = useStateValue();
+  const [{ term="tesla" }, dispatch] = useStateValue();
   // LIVE DATA
   // const {data} = useGoogleSearch(term) 
 
@@ -75,11 +75,22 @@ export default function SearchPage() {
     {true && (
       <div className="searchPage__results">
         <p className='searchPage__resultCount'>
-          About {data?.searchInformation.formattedTotalResults} ({data?.searchInformation.formattedSearchTime} seconds) for Tesla
+          About {data?.searchInformation.formattedTotalResults} ({data?.searchInformation.formattedSearchTime} seconds) for {term}
         </p>
+        {data?.items.map(item => (
+          <div className='searchPage__result'>
+            <a href={item.link}>
+            {item.displayLink}
+            </a>
+            <a className='searchPage__resultTitle' href={item.link}>
+              <h2>{item.title}</h2>
+            </a>
+            <p className='searchPage__resultSnippet'>{item.snippet}</p>
+          </div>
+        ))}
       </div>
     )}
-
+  
     </div>
   );
 }
